@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LumoAI</title>
+    <meta name="description" content="LumoAI provides SLIIT students with access to lecture materials, allowing them to select a module and ask any questions for instant, AI-powered answers." />
+    <!-- Add this script in the head to prevent flash -->
+    <script>
+      // Check for saved theme preference or system preference
+      const savedTheme = localStorage.getItem('darkMode');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      // Apply dark mode immediately if enabled
+      if (savedTheme ? JSON.parse(savedTheme) : systemPrefersDark) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body class="h-full bg-gray-100 dark:bg-gray-900 overflow-x-hidden overscroll-none">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

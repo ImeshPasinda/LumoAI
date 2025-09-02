@@ -1,0 +1,9 @@
+Flask
+flask-cors
+langchain
+langchain-community
+langchain-openai
+openai
+faiss-cpu
+pypdf
+python-dotenv
